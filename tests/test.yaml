@@ -1,0 +1,66 @@
+
+ActionSource:
+  type: Object
+  properties: 
+    name:
+      type: String
+
+HistoryItem:
+  type: Object
+  properties:
+    title:
+      type: String
+    description: 
+      type: String
+    source:
+      type: ActionSource
+    timestamp:
+      type: Integer
+
+LineItem:
+  type: Object
+  properties:
+    description:
+      type: String
+    amount:
+      type: Integer
+    id:
+      type: String      
+    
+TicketEntry:
+  type: Object
+  properties:
+    email:
+      type: String
+    ticket_number:
+      type: String
+    access:
+      type: List<Integer>
+    active:
+      type: Boolean
+    checkout_session:
+      type: String
+    full_name:
+      type: String
+    history:
+      type: List<HistoryItem>
+      default: []
+    line_items:
+      type: List<LineItem>  
+    purchase_date:
+      type: Integer
+    status:
+      type: String
+    student_ticket:
+      type: Boolean
+    ticket_used:
+      type: Boolean
+    schedule?:
+      type: List<String>
+      extant: missing
+    phone?:
+      type: String
+      extant: missing      
+    promo_code?:
+      type: String
+      extant: missing      
